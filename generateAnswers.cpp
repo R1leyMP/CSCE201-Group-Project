@@ -69,6 +69,11 @@ char generateAnswers(vector<string> a_list, int a_index, vector<string> q_list, 
         else {
             do {
                 j = rand() % a_list.size();
+                if (j == a_index){
+                    while (j == a_index){
+                        J = rand() % a_list.size();
+                    }
+                }
             } while (findNum(j, options));
             options[i] = j;
         }
