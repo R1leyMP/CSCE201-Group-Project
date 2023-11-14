@@ -152,8 +152,9 @@ int main() {
         
     }
     
-    string question;
+    
     int position = rand()% sizeof(answers_v);
+    string question = questions_v.at(position);
     char user_ans, correct_ans = generateAnswers(answers_v, position, questions_v, question);
     
     // This can be improved for sure... just how I was testing the rest of my code
