@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <ctime>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -69,6 +70,11 @@ char generateAnswers(vector<string> a_list, int a_index, vector<string> q_list, 
         else {
             do {
                 j = rand() % (a_list.size() - 1);
+                if (j == a_index){
+                    while (j==a_index){
+                        j = rand() % (a_list.size()-1);
+                    }
+                }
             } while (findNum(j, options));
             options[i] = j;
         }
@@ -112,21 +118,25 @@ char generateAnswers(vector<string> a_list, int a_index, vector<string> q_list, 
 }
 
 int main() {
-    srand( static_cast<unsigned int>(time(nullptr))); // This is needed in Xcode to make rand() work
+    srand( static_cast<unsigned int>(time(nullptr)));
     
+    char playAgain = 'Y';
+    int quesCount = 0; //question # (i.e Q1)
+    int userPoints = 0; //total correct guesses
     
     // open answers.txt and questions.txt in order to get questions and answers
     ifstream inFS_Answers;
     ifstream inFS_Questions;
-        // this is one of the weird xcode things. It needs the full path to open the file. In other compilers it should just be "answers.txt" and "questions.txt"
-    inFS_Answers.open("/Users/hannahtrotter/Downloads/answers.txt");
-    inFS_Questions.open("/Users/hannahtrotter/Downloads/questions.txt");
+
+    inFS_Answers.open("answers.txt");
+    inFS_Questions.open("questions.txt");
     
-    
-    // answers_v short for "answers vector". Names subject to change, I just had to pick something
     vector<string> answers_v;
     vector<string> questions_v;
-        // (delete later) Kiera's original test vector = {"Leopard", "Butterfly", "Tiger", "Lion", "Cheetah", "Magpie", "Goldfish", "Dog"};
+
+    cout << "TITLE PAGE" << endl;
+    system ("PAUSE");
+    system ("CLS");
     
     // while loop stores each line from answers.txt and questions.txt in the corresponding vecotrs
     while ((!inFS_Answers.fail()) && (!inFS_Questions.fail())){
@@ -147,21 +157,31 @@ int main() {
         
     }
     
-    for(int i = 0; i < 10; i++){
+    while (playAgain != 'N' && playAgain != 'n'){
         string question;
-        int position = rand()% (sizeof(answers_v) - 1);
-        cout << "Q" << (i + 1) << ". ";
+        int position = rand() % (sizeof(answers_v) - 1);
+        cout << "Q" << (quesCount + 1) << ". ";
         char user_ans, correct_ans = generateAnswers(answers_v, position, questions_v, question);
         
-        // This can be improved for sure... just how I was testing the rest of my code
-        cin >> user_ans;
+        cin >> user_ans; //takes user guess
+        
         if (user_ans == correct_ans) {
-            cout << "Correct" << endl;
+            ++userPoints;
+            cout << "\nCorrect!\n" << endl;
+            cout << "Play again? (Y/N): ";
+            cin >> playAgain;
+            system ("CLS");
         }
         else {
-            cout << "Incorrect" << endl;
-            cout << "Correct answer is: " << correct_ans << ". " << answers_v[position] << endl;
+            cout << "\nIncorrect." << endl;
+            cout << "Correct answer is: " << answers_v[position] << "\n" << endl;
+            cout << "Play again? (Y/N): ";
+            cin >> playAgain;
+            system ("CLS");
         }
+
+        ++quesCount; //updates question count to next num (i.e. Q1 -> Q2)
     }
+    cout << "Total correct: " << userPoints << " of " << quesCount << endl;
     
 }
