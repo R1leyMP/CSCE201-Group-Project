@@ -135,7 +135,7 @@ int main() {
     vector<string> questions_v;
 
     cout << "TITLE PAGE" << endl;
-    system ("PAUSE");
+    system ("PAUSE");  //screen clear code
     system ("CLS");
     
     // while loop stores each line from answers.txt and questions.txt in the corresponding vecotrs
@@ -170,7 +170,7 @@ int main() {
             cout << "\nCorrect!\n" << endl;
             cout << "Play again? (Y/N): ";
             cin >> playAgain;
-            system ("CLS");
+            system ("CLS"); //screen clear
         }
         else {
             cout << "\nIncorrect." << endl;
