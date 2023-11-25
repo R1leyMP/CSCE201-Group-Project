@@ -8,5 +8,5 @@ Version should work for all C++ environments.
 
 All users download ANSWER and QUESTION .txt files to same folder as cpp file for program to work.  
 
-**Xcode users may have to update lines 135 & 136 with direct file path to ANSWER and QUESTION docs.
+**Xcode users may have to update lines 136 & 137 with direct file path to ANSWER and QUESTION docs.
 _________________________________________
