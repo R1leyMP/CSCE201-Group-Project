@@ -1,5 +1,5 @@
 # CSCE201-Group-Project
-This program takes corresponding questions and answers and displays multiple choices for user to select.
+This program takes corresponding questions and answers about animals, and allows user to guess which one is correct.
 _________________________________________
 DOWNLOADS:
 Windows User: download Windows version
