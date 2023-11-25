@@ -4,10 +4,7 @@ This program takes corresponding questions and answers about animals, and allows
 CAPS LOCK ON FOR ANSWERS
 _________________________________________
 DOWNLOADS: 
-Windows User: download Windows version. 
-Mac User: download XCode version.  
-
 All users download ANSWER and QUESTION .txt files to same folder as cpp file for program to work.  
 
-**X-Code users may have to update lines 131 & 132 with direct file path to ANSWER and QUESTION docs.
+**X-Code users may have to update lines 136 & 137 with direct file path to ANSWER and QUESTION docs.
 _________________________________________
