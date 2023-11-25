@@ -134,7 +134,11 @@ int main() {
     vector<string> answers_v;
     vector<string> questions_v;
 
-    cout << "TITLE PAGE" << endl;
+    cout << "----------------------------" << endl;
+    cout << " Animal Facts Questionnaire" << endl;
+    cout << "----------------------------" << endl;
+    cout << "\tCreated by:" << endl;
+    cout << "\tKiera Chase\n\tHannah Trotter\n\tRiley Petty\n" << endl;
     system ("PAUSE");  //screen clear code
     system ("CLS");
     
