@@ -138,7 +138,7 @@ int main() {
     vector<string> answers_v;
     vector<string> questions_v;
 
-    /* Added by Riley Petty but code did not work as intended in Xcode
+    /* Added by Riley Petty but code did not work as intended in Xcode/MacOS
      cout << "TITLE PAGE" << endl;
     system ("PAUSE");  //screen clear code
     system ("CLS");
