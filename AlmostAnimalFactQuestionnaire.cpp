@@ -12,7 +12,6 @@
 #include <string>
 #include <vector>
 #include <ctime>
-#include <stdlib.h>
 
 using namespace std;
 
@@ -144,8 +143,8 @@ int main() {
     cout << " Animal Facts Questionnaire" << endl;
     cout << "----------------------------" << endl;
     cout << "\tCreated by:" << endl;
-    cout << "\tKiera Chase\n\tRiley Petty\n\tHannah Trotter\n" << endl;
-    
+    cout << "\tKiera Chase\n\tRiley Petty\n\tHannah Trotter" << endl;
+    cout << "----------------------------" << endl;
     
     // while loop stores each line from answers.txt and questions.txt in the corresponding vecotrs
     while ((!inFS_Answers.fail()) && (!inFS_Questions.fail())){
@@ -179,12 +178,14 @@ int main() {
             cout << "\nCorrect!\n" << endl;
             cout << "Play again? (Y/N): ";
             cin >> playAgain;
+            cout << endl;
         }
         else {
             cout << "\nIncorrect." << endl;
             cout << "Correct answer is: " << answers_v[position] << "\n" << endl;
             cout << "Play again? (Y/N): ";
             cin >> playAgain;
+            cout << endl;
         }
 
         ++quesCount; //updates question count to next num (i.e. Q1 -> Q2)
