@@ -1,5 +1,7 @@
 # CSCE201-Group-Project
 This program takes corresponding questions and answers about animals, and allows user to guess which one is correct.
+
+CAPS LOCK ON FOR ANSWERS
 _________________________________________
 DOWNLOADS: 
 Windows User: download Windows version. 
