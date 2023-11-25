@@ -2,8 +2,8 @@
 This program takes corresponding questions and answers about animals, and allows user to guess which one is correct.
 _________________________________________
 DOWNLOADS: 
-Windows User: download Windows version.\n 
-Mac User: download XCode version. 
+Windows User: download Windows version. 
+Mac User: download XCode version.  
 
 All users download ANSWER and QUESTION .txt files to same folder as cpp file for program to work.  
 
