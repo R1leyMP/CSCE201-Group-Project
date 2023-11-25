@@ -143,6 +143,13 @@ int main() {
     system ("PAUSE");  //screen clear code
     system ("CLS");
     */
+    //title & credits
+    cout << "----------------------------" << endl;
+    cout << " Animal Facts Questionnaire" << endl;
+    cout << "----------------------------" << endl;
+    cout << "\tCreated by:" << endl;
+    cout << "\tKiera Chase\n\tHannah Trotter\n\tRiley Petty" << endl;
+    cout << "----------------------------" << endl;
     
     
     // while loop stores each line from answers.txt and questions.txt in the corresponding vecotrs
