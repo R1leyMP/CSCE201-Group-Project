@@ -23,3 +23,46 @@ prairie dogs
 bat
 gorilla
 polar bear
+shrimp (species)
+snail
+koala
+elephant
+sloth
+giraffe
+kangaroo
+frog
+pistol shrimp
+mosquito
+horned lizard
+swift
+cockroach
+cow
+cheetah
+nile crocodile
+dog
+cat
+horse
+shark
+armadillo
+prairie dogs
+bat
+gorilla
+polar bear
+sperm whale
+tasmanian devil
+moray eel
+slow loris
+pigeon
+ferret
+alligator
+snow leopard
+axolotl
+rhino
+squirrel
+giant anteater
+moth
+crocodile
+raven
+tiger
+spur-winged goose
+catfish
