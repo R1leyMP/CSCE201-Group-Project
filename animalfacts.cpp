@@ -173,7 +173,8 @@ int main() {
 
     }
 
-    while (playAgain != 'N' && playAgain != 'n'){
+    // while loop happens while user doesn't enter 'N' or 'n' and the size of the vectors is greater than 3 full multiple choice
+    while ((playAgain != 'N') && (playAgain != 'n') && (sizeof(answers_v) > 3)){
         string question;
         int position = rand() % (sizeof(answers_v) - 1);
         cout << "Q" << (quesCount + 1) << ". ";
@@ -197,6 +198,11 @@ int main() {
             cout << endl;
 
         }
+        
+        // erases question and answer used from vectors to avoid dublicate
+        answers_v.erase(answers_v.begin() + position);
+        questions_v.erase(questions_v.begin() + position);
+        
 
         ++quesCount; //updates question count to next num (i.e. Q1 -> Q2)
     }
