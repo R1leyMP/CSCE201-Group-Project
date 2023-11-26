@@ -174,7 +174,7 @@ int main() {
     }
 
     // while loop happens while user doesn't enter 'N' or 'n' and the size of the vectors is greater than 3 full multiple choice
-    while ((playAgain != 'N') && (playAgain != 'n') && (sizeof(answers_v) > 3)){
+    while ((playAgain != 'N') && (playAgain != 'n') && (quesCount < 20) ){
         string question;
         int position = rand() % (sizeof(answers_v) - 1);
         cout << "Q" << (quesCount + 1) << ". ";
@@ -186,16 +186,20 @@ int main() {
         if (user_ans == correct_ans) {
             ++userPoints;
             cout << "\nCorrect!\n" << endl;
-            cout << "Play again? (Y/N): ";
-            cin >> playAgain;
-            cout << endl;
+            if (quesCount < 19){
+                cout << "Play again? (Y/N): ";
+                cin >> playAgain;
+                cout << endl;
+            }
         }
         else {
             cout << "\nIncorrect." << endl;
             cout << "Correct answer is: " << answers_v[position] << "\n" << endl;
-            cout << "Play again? (Y/N): ";
-            cin >> playAgain;
-            cout << endl;
+            if (quesCount < 19){
+                cout << "Play again? (Y/N): ";
+                cin >> playAgain;
+                cout << endl;
+            }
 
         }
         
