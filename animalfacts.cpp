@@ -203,7 +203,7 @@ int main() {
 
         }
         
-        // erases question and answer used from vectors to avoid dublicate
+        // erases question and answer used from vectors to avoid duplicate
         answers_v.erase(answers_v.begin() + position);
         questions_v.erase(questions_v.begin() + position);
         
